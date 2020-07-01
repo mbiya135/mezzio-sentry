@@ -13,7 +13,7 @@ class Listener
 {
 
     /** @var array */
-    private array $config;
+    private $config;
 
     /**
      * Listener constructor.
@@ -21,7 +21,7 @@ class Listener
      */
     public function __construct(array $config)
     {
-        $this->config = $config;
+        $this->config = $config['sentry'];
         $client = ClientBuilder::create($this->config['sentry'])->getClient();
         SentrySdk::init()->bindClient($client);
     }
