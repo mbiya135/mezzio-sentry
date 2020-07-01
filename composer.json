@@ -1,0 +1,29 @@
+
+{
+  "name": "mbiya135/mezzio-sentry",
+  "type": "library",
+  "description": "Sentry ErrorHandler",
+  "license": "MIT",
+  "require": {
+    "sentry/sdk": "^2.1",
+    "mezzio/mezzio": "^3.2",
+    "laminas/laminas-servicemanager": "3.3"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.11.19",
+    "phpstan/phpstan-strict-rules": "^0.11.1",
+    "squizlabs/php_codesniffer": "^3.4"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Mbiya135\\Mezzio\\Sentry\\": "src/"
+    }
+  },
+  "scripts": {
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf"
+  }
+}
